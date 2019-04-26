@@ -1,0 +1,37 @@
+enunciado:
+    Faça um algoritmo que leia uma matriz quadradaA de NxN (n<=20). O valor
+    de n é fornecido inicialmente. Verifique se a matriz é simétrica , ou seja,
+    A[i,j] == A[j,i] para todos i,j <=n. O algoritmo deverá imprimir "simétrica" se é simetrica
+    "não simétrica" caso contrario.
+    
+algoritmo
+
+    declare a[1:100,1:100],i,j numerico
+    declare ehsimetrica lógica
+    
+    ehsimetrica <- V
+    i <- 1
+    repita
+        se i >  e ehsimetrica
+            então interrompa
+         fimse
+         j <- 1
+         repita
+                se j > n e ehsimetrica
+                    então interrompa
+                fimse
+                se A[i,j] != A[j,i]
+                    entao ehsimetrica <- F
+                    interrompa
+                fimse
+                j <- j + 1
+            fimrepita
+            i <- i +1
+    fimrepita
+
+    se ehverdadeira
+        entao escreva "É uma matriz simétrica"
+     senao
+        escreva "Não é uma matriz simetrica"
+    fimse
+fim

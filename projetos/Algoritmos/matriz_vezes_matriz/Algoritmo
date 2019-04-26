@@ -1,0 +1,96 @@
+enunciado:
+  A multiplicação de duas matrizes A e B só é possivel se o numero de colunas de A for igual ao número
+ de linhas de B.
+ Seja A uma matriz m*n
+      B uma matriz n*p
+      C (produto A*B) uma matriz m*p
+    sendo Cij=Somatória Aik*Bkj
+    C11 = A11*B11+A12*B21+A13*B31
+    C12 = A11*B12+A12+B22+A13*B32
+    C21 = A21*B11+A22*B21+A23*B31
+    C22 = A21*B12+A22*B22+A23*B32         
+ 1) Declare as variaveis
+ 2) Preencher as matrizes A(m*n)e B(n*p)
+ 3) Multiplicar C = A * B
+ 4) Apresentar a matriz C
+ 
+ algoritmo
+    declare A[1:100,1:100] B[1:100,1:100], C[i:100,1:100], i, j, k, m, n numerico
+    declare soma numerico
+    leia m,n,p
+        
+    i <- 1
+    repita
+        se i > m
+            entao interrompa
+        fimse
+        j <- 1
+        repita
+            se j>n
+                entao interrompa
+            fimse
+            escreva "Digite um valor par a matriz: "
+            leia A[i,j]
+            j <- j + 1
+        fimrepita
+        i <- i + 1
+    fimrepita
+
+    i <- 1
+    repita
+        se i > n
+            entao interrompa
+        fimse
+        j <- 1
+        repita
+            se j > p
+                entao interrompa
+            fimse
+            escreva "Digite um valor par a matriz: "
+            leia B[i,j]
+            j <- j + 1
+        fimrepita
+        i <- i + 1
+    fimrepita
+
+    i <- 1
+    repita
+        se  i > m
+            entao interrompa
+        fimse
+        j <- 1
+        repita
+            se j>p
+                entao interrompa
+            fimse
+            k <- 1
+            soma = 0
+            repita
+                se k>n
+                    entao interrompa
+                fimse
+                soma <- soma + A[i,k] * B[k,j]
+                k <- k + 1
+            fimrepita
+            C[i,j] <- soma
+            j <- j + 1
+        fimrepita
+        i <- i + 1
+    fimrepita
+    
+    i <- 1
+    repita
+        se i > m
+            entao interrompa  
+        fimse
+        j <- 1
+        repita
+            se j > p
+                entao interrompa
+            fimse
+            escreva C[i,j]
+            j <- j + 1
+        fimrepita
+        i <- i + 1
+    fimrepita
+fim algoritmo
